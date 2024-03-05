@@ -37,9 +37,7 @@ public class Bank_Manager_Customers_Info extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=0)
-    public void Search_For_Existing_Customer
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) {
+    public void Search_For_Existing_Customer(String First_Name, String Last_Name, String Post_Code) {
 
         // config extent report
         ExtentTest test = extent.createTest("Search_For_Existing_Customer");
@@ -65,9 +63,7 @@ public class Bank_Manager_Customers_Info extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=1)
-    public void Search_For_Non_Existing_Customer
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) {
+    public void Search_For_Non_Existing_Customer(String First_Name, String Last_Name, String Post_Code) {
 
         // config extent report
         ExtentTest test = extent.createTest("Search_For_Non_Existing_Customer");
@@ -88,9 +84,7 @@ public class Bank_Manager_Customers_Info extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=2)
-    public void Delete_Customer
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) {
+    public void Delete_Customer(String First_Name, String Last_Name, String Post_Code) {
 
         // config extent report
         ExtentTest test = extent.createTest("Delete_Customer");

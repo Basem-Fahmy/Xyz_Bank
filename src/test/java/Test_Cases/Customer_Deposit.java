@@ -45,9 +45,7 @@ public class Customer_Deposit extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=0)
-    public void Deposit_With_Zero
-        (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-         String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+    public void Deposit_With_Zero (String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Deposit_With_Zero");
@@ -86,9 +84,7 @@ public class Customer_Deposit extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=1)
-    public void Deposit_With_Negative_Amount
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+    public void Deposit_With_Negative_Amount(String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Deposit_With_Negative_Amount");
@@ -127,9 +123,7 @@ public class Customer_Deposit extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=2)
-    public void Deposit_With_Positive_Amount
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+    public void Deposit_With_Positive_Amount(String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Deposit_With_Positive_Amount");

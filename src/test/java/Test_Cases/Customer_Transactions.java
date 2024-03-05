@@ -47,8 +47,7 @@ public class Customer_Transactions extends Base_Class{
 
     @Test(dataProvider ="test_data" , priority=0)
     public void Check_User_Transactions
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException, InterruptedException {
+            (String First_Name, String Last_Name, String Post_Code) throws IOException, InterruptedException {
 
         // config extent report
         ExtentTest test = extent.createTest("Check_User_Transactions");
@@ -81,8 +80,7 @@ public class Customer_Transactions extends Base_Class{
 
     @Test(dataProvider ="test_data" , priority=1)
     public void Reset_Transactions
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+            (String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Reset_Transactions");

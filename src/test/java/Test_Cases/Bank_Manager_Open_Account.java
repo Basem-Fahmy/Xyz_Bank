@@ -37,9 +37,7 @@ public class Bank_Manager_Open_Account extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=0)
-    public void Open_Account
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) {
+    public void Open_Account(String First_Name, String Last_Name, String Post_Code) {
 
         // config extent report
         ExtentTest test = extent.createTest("Open_Account");

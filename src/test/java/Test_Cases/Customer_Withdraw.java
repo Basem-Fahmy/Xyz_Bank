@@ -46,9 +46,7 @@ public class Customer_Withdraw extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=0)
-    public void Withdraw_With_Zero
-        (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-         String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+    public void Withdraw_With_Zero(String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Withdraw_With_Zero");
@@ -87,9 +85,7 @@ public class Customer_Withdraw extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=1)
-    public void Withdraw_With_Negative_Amount
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+    public void Withdraw_With_Negative_Amount(String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Withdraw_With_Negative_Amount");
@@ -129,8 +125,7 @@ public class Customer_Withdraw extends Base_Class{
 
     @Test(dataProvider ="test_data" , priority=2)
     public void Withdraw_With_Positive_Amount_Balance_Is_Zero
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+            (String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Withdraw_With_Positive_Amount_Balance_Is_Zero");
@@ -164,8 +159,7 @@ public class Customer_Withdraw extends Base_Class{
 
     @Test(dataProvider ="test_data" , priority=3)
     public void Withdraw_With_Positive_Amount_Current_Balance_Is_Higher_Than_Withdraw_Amount
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException, InterruptedException {
+            (String First_Name, String Last_Name, String Post_Code) throws IOException, InterruptedException {
 
         // config extent report
         ExtentTest test = extent.createTest(" Withdraw_With_Positive_Amount_Current_Balance_Is_Higher_Than_Withdraw_Amount");
@@ -205,8 +199,7 @@ public class Customer_Withdraw extends Base_Class{
 
     @Test(dataProvider ="test_data" , priority=4)
     public void Withdraw_With_Positive_Amount_Current_Balance_Is_Less_Than_Withdraw_Amount
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException, InterruptedException {
+            (String First_Name, String Last_Name, String Post_Code) throws IOException, InterruptedException {
 
         // config extent report
         ExtentTest test = extent.createTest("Withdraw_With_Positive_Amount_Current_Balance_Is_Less_Than_Withdraw_Amount");

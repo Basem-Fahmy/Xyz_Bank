@@ -45,9 +45,7 @@ public class Bank_Manager_Add_Customer extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=0)
-    public void Add_Customer
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) {
+    public void Add_Customer(String First_Name, String Last_Name, String Post_Code) {
 
         // config extent report
         ExtentTest test = extent.createTest("Add_Customer");
@@ -66,9 +64,9 @@ public class Bank_Manager_Add_Customer extends Base_Class{
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));   // implicit wait
         driver.findElement(Bank_Manager_Login_Btn).click(); // click on bank manager login btn
         driver.findElement(Add_customer_option).click();   // add customer
-        driver.findElement(First_Name_Input).sendKeys("First_Name_01"); // enter user first name
-        driver.findElement(Last_Name_Input).sendKeys("Last_Name_01"); // enter user last name
-        driver.findElement(Post_Code_Input).sendKeys("632528"); // enter user post code
+        driver.findElement(First_Name_Input).sendKeys(First_Name); // enter user first name
+        driver.findElement(Last_Name_Input).sendKeys(Last_Name); // enter user last name
+        driver.findElement(Post_Code_Input).sendKeys(Post_Code); // enter user post code
         driver.findElement(Submit_2).click();  // click on add customer btn to submit
         String Alert_Message = driver.switchTo().alert().getText();
         driver.switchTo().alert().accept();  // accept the popup alert
@@ -80,8 +78,7 @@ public class Bank_Manager_Add_Customer extends Base_Class{
 
     @Test(dataProvider ="test_data" , priority=1)
     public void Add_Customer_Info_Are_Numbers_Only
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+            (String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Add_Customer_Info_Are_Numbers_Only");
@@ -100,9 +97,9 @@ public class Bank_Manager_Add_Customer extends Base_Class{
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));   // implicit wait
         driver.findElement(Bank_Manager_Login_Btn).click(); // click on bank manager login btn
         driver.findElement(Add_customer_option).click();   // add customer
-        driver.findElement(First_Name_Input).sendKeys("1234"); // enter user first name
-        driver.findElement(Last_Name_Input).sendKeys("5678"); // enter user last name
-        driver.findElement(Post_Code_Input).sendKeys("632528"); // enter user post code
+        driver.findElement(First_Name_Input).sendKeys("123"); // enter user first name
+        driver.findElement(Last_Name_Input).sendKeys("456"); // enter user last name
+        driver.findElement(Post_Code_Input).sendKeys(Post_Code); // enter user post code
         driver.findElement(Submit_2).click();  // click on add customer btn to submit
         driver.switchTo().alert().accept();
 
@@ -121,9 +118,7 @@ public class Bank_Manager_Add_Customer extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=2)
-    public void Add_Existing_Customer
-            (String User_Name,String Password, String Wrong_Username,String Wrong_Password,
-             String Info_First_Name, String Info_Last_name,String Zip_Code) throws IOException {
+    public void Add_Existing_Customer(String First_Name, String Last_Name, String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Add_Existing_Customer");
@@ -143,15 +138,15 @@ public class Bank_Manager_Add_Customer extends Base_Class{
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));   // implicit wait
         driver.findElement(Bank_Manager_Login_Btn).click(); // click on bank manager login btn
         driver.findElement(Add_customer_option).click();   // add customer
-        driver.findElement(First_Name_Input).sendKeys("First_Name_01"); // enter user first name
-        driver.findElement(Last_Name_Input).sendKeys("Last_Name_01"); // enter user last name
-        driver.findElement(Post_Code_Input).sendKeys("632528"); // enter user post code
+        driver.findElement(First_Name_Input).sendKeys(First_Name); // enter user first name
+        driver.findElement(Last_Name_Input).sendKeys(Last_Name); // enter user last name
+        driver.findElement(Post_Code_Input).sendKeys(Post_Code); // enter user post code
         driver.findElement(Submit_2).click();  // click on add customer btn to submit
         String Alert_Message = driver.switchTo().alert().getText();
         driver.switchTo().alert().accept();  // accept the popup alert
-        driver.findElement(First_Name_Input).sendKeys("First_Name_01"); // enter user first name
-        driver.findElement(Last_Name_Input).sendKeys("Last_Name_01"); // enter user last name
-        driver.findElement(Post_Code_Input).sendKeys("632528"); // enter user post code
+        driver.findElement(First_Name_Input).sendKeys(First_Name); // enter user first name
+        driver.findElement(Last_Name_Input).sendKeys(Last_Name); // enter user last name
+        driver.findElement(Post_Code_Input).sendKeys(Post_Code); // enter user post code
         driver.findElement(Submit_2).click();  // click on add customer btn to submit
         //String Alert_Message = driver.switchTo().alert().getText();
         driver.switchTo().alert().accept();  // accept the popup alert
