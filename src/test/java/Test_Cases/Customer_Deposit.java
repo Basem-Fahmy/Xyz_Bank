@@ -45,7 +45,7 @@ public class Customer_Deposit extends Base_Class{
     }
 
     @Test(dataProvider ="test_data" , priority=0)
-    public void Deposit_With_Zero (String First_Name, String Last_Name, String Post_Code) throws IOException {
+    public void Deposit_With_Zero(String First_Name,String Last_Name,String Post_Code) throws IOException {
 
         // config extent report
         ExtentTest test = extent.createTest("Deposit_With_Zero");

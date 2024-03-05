@@ -6,7 +6,7 @@ import java.io.FileInputStream;
 
 public class import_excel{
     public String[][]data_import() throws Exception {
-        FileInputStream my_data_file = new FileInputStream("src\\test\\java\\Test_Data\\Data_Sheet01.xlsx"); // import excelsheet file
+        FileInputStream my_data_file = new FileInputStream("src\\test\\java\\Test_Data\\My_Data.xlsx"); // import excelsheet file
         XSSFWorkbook myworkbook = new XSSFWorkbook(my_data_file);
         XSSFSheet mysheet=myworkbook.getSheet("Sheet1");
         int n_of_rows = mysheet.getPhysicalNumberOfRows();
